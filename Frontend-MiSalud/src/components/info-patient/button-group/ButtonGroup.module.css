@@ -1,0 +1,33 @@
+@import url("../../../styles/default.module.css");
+
+.button__group--container{
+    display: flex  ;
+    width: 40%;
+    height: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.group--container--button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 60px;
+    font-size: 18px;
+    background-color: var(--color-cyan);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition:  0.3s;
+}
+
+.group--container--button:hover {
+    opacity: 0.6;
+    transition:  0.3s;
+}

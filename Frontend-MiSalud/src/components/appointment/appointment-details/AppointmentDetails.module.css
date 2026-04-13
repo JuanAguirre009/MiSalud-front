@@ -1,0 +1,60 @@
+
+.appointment__details--empty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height:75%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px ;
+    padding-top: 0; 
+}
+
+
+.details__appointment--container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 90%;
+    height:75%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px ;	
+    padding-top: 0;
+}
+
+.container__title--text,
+.container__patient--title,
+.container__doctor--title{
+    padding: 10px 0px ;
+    margin: 0;
+    color: var(--color-cyan);
+}
+.container__title--description{
+    padding:  0px;
+    padding-bottom: 10px;
+    margin: 0;
+    color: var(--color-dark-teal);
+    font-size: 18px;
+    font-weight: var(--font-regular);
+}
+
+.appointment__content--item{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 2px 0px ;
+    margin: 0;
+    color: var(--color-dark-teal);
+}
+
+.content__item-strong{
+    color: var(--color-cyan);
+    font-size: 18px;
+    font-weight: var(--font-bold);
+    margin: 0;
+    padding-right: 10px;
+}

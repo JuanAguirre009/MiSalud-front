@@ -1,0 +1,52 @@
+
+@import url("../../../styles/default.module.css");
+
+.card__search {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 110px;
+    background-color: var(--color-gray);
+    width: 450px;
+    height: 340px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card__search--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    width: 95%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.serch__container--title {
+    font-size: 25px;
+    font-weight: var(--font-semibold);
+    color: var(--color-cyan);
+}
+
+.card__search--button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    border: none;
+    background-color: var(--color-cyan);
+    padding: 15px 154px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.card__search--button:hover{
+   opacity: 0.7;
+    cursor: pointer;
+    transition: 0.3s;
+}

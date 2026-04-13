@@ -1,0 +1,33 @@
+@import url("../../styles/default.module.css");
+
+.current__user{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+}
+.current__user--greeting{
+    color:var(--color-cyan) ;
+    font-weight: var(--font-semibold);
+    font-size: 1.2rem; ;
+}
+
+.current__user--card{
+   display: flex;
+   align-items:center ;
+   justify-content: center;
+   background-color: var(--color-gray);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.user__card--img{
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+

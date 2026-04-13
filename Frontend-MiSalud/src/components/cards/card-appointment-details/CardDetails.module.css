@@ -1,0 +1,50 @@
+@import url("../../../styles/default.module.css");
+ 
+.card__appointment {
+  background-color: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  width: 97%;
+  font-size: 40px;
+  color: var(--color-darkblue);
+}
+ 
+.card__appointment--title {
+  color: var(--color-cyan);
+  font-weight: var(--font-bold);
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+ 
+.card__appointment--info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 10px;
+}
+ 
+.card__appointment--info p {
+  margin: 0;
+  font-size: 22px;
+  color:  #4d7b80;
+}
+ 
+.card__cita {
+  display: flex;
+  justify-content: start;
+  align-content: start;
+  flex-direction: column;
+  width: 92%;
+  height: 90%;
+}
+ 
+span{
+  color: #4d7b80;
+}
+
+.card__appointment--info strong {
+  margin: 0;
+  font-size: 35px;
+  color:  var(--color-cyan);
+}

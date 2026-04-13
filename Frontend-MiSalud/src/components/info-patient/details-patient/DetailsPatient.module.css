@@ -1,0 +1,59 @@
+@import url("../../../styles/default.module.css");
+
+.details__patient--container{
+    display: flex;
+    width: 40%;
+    height: 50%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.patient__container--title{
+    color: var(--color-cyan);
+}
+
+.details__patient--content{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding:0 ;
+    margin: 0;
+
+}
+
+.patient__content--fullname, 
+.patient__content--cedula,
+.patient__content--phone,
+.patient__content--email,
+.patient__content--address{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: start;
+    align-items: start;
+    margin: 0;
+    padding: 0;
+}
+
+.patient__content--title{
+    color: var(--color-cyan);
+    font-size: 24px;  
+    font-weight: var(--font-medium);
+    margin: 0;
+    padding: 0;
+}
+
+.patient__content--content{
+    color: var(--color-dark-teal);
+    font-size: 24px;  
+    font-weight: var(--font-medium);
+    margin: 0;
+    padding: 0;
+}

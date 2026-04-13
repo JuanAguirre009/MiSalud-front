@@ -1,0 +1,34 @@
+@import url("../../../styles/default.module.css");
+.appointment__item{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    height:140px;
+    background-color: white;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.appointment__item:hover{   
+    transform: scale(1.02);
+}
+
+.appointment__item--title{
+    color : var(--color-cyan);
+    font-size: 18px;
+    font-weight: var(--font-bold);
+    margin: 0;
+    padding: 0;
+}
+
+.appointment__item--details{
+    color: var(--color-dark-teal);
+    font-size: 15px;
+    padding: 0;
+}

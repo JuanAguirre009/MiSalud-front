@@ -1,0 +1,44 @@
+@import url("../../../styles/default.module.css");
+
+.card__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-gray);
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card__button:hover{
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.card__button--text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-cyan);
+    font-size: 25px;
+    font-weight: var(--font-extrabold);
+    max-width: 200px;
+}
+
+.card__button--container{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: end;
+    width: 100px;
+    height: 100px;
+}
+
+.button__container--icon{
+    width: 65%;
+    height: 65%;
+}
