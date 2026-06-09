@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { useMiSaludStore } from "../../../zustand/miSaludStore.js";
 import iconAdministracion from "../../../assets/images/administracion.png";
 import {modalMessage} from "../../../helpers/modal-alert/modalAlert.js";
+import { API_URL } from "../../../config";
 export default function CardSearch() {
   const navigate = useNavigate();
   const setCardTitle = useMiSaludStore((state) => state.setCardTitle);
@@ -17,7 +18,7 @@ export default function CardSearch() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch("http://localhost:5256/api/Patient/GetPatientByCedula/" + data.cc);
+      const response = await fetch(`${API_URL}/api/Patient/GetPatientByCedula/${data.cc}`);
       
       if (!response.ok) {
         modalMessage("¡Paciente no encontrado!");

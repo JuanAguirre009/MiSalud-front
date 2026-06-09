@@ -5,6 +5,7 @@ import { useMiSaludStore } from "../../zustand/miSaludStore.js";
 import iconPaciente from "../../assets/images/patienticon.png";
 import { modalMessage } from "../../helpers/modal-alert/modalAlert.js";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../../config";
 
 export default function FormPatient() {
   const setCardTitle = useMiSaludStore((state) => state.setCardTitle);
@@ -44,7 +45,7 @@ export default function FormPatient() {
 
     try {
       const response = await fetch(
-        `http://localhost:5256/api/Patient/ExistsByCedulaOrCorreo?cedula=${data.cedula}&correo=${data.correo}`,
+        `${API_URL}/api/Patient/ExistsByCedulaOrCorreo?cedula=${data.cedula}&correo=${data.correo}`,
         {
           method: "GET",
         }
@@ -62,7 +63,7 @@ export default function FormPatient() {
         return;
       }
 
-      const registerResponse = await fetch("http://localhost:5256/api/Patient/AddPatient", {
+      const registerResponse = await fetch(`${API_URL}/api/Patient/AddPatient`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

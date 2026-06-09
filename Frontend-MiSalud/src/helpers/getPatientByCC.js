@@ -1,8 +1,8 @@
-
+import { API_URL } from "../config";
 export default async function getPatientByCC(cc) {
     
     try {
-        const response = await fetch("http://localhost:5256/api/Patient/GetPatientByCedula/" + cc);
+        const response = await fetch(`${API_URL}/api/Patient/GetPatientByCedula/${cc}`);
         const result = await response.json();
 
         if (!response.ok) {

@@ -1,5 +1,6 @@
 import { generateAllTimes, calcularHoraFinal } from "./appointmentUtils";
 import { modalMessage, modalSelect, modalConfirm } from "../helpers/modal-alert/modalAlert";
+import { API_URL } from "../config";
 
 export const handleScheduleFlow = async ({ date, appointmentInfo, setAppointmentInfo }) => {
   const formattedDate = date;
@@ -18,11 +19,11 @@ export const handleScheduleFlow = async ({ date, appointmentInfo, setAppointment
     fechaCita: formattedDate,
   }));
 
-  const appointmentRes = await fetch(`http://localhost:5256/api/MedicalAppointment/GetMedicalAppointmentByDate/${formattedDate}`);
+  const appointmentRes = await fetch(`${API_URL}/api/MedicalAppointment/GetMedicalAppointmentByDate/${formattedDate}`);
   const appointmentData = await appointmentRes.json();
   const appointments = appointmentData.data || [];
 
-  const doctorRes = await fetch("http://localhost:5256/api/Doctor/GetDoctors");
+  const doctorRes = await fetch(`${API_URL}/api/Doctor/GetDoctors`);
   const doctorData = await doctorRes.json();
   const allDoctors = doctorData.data || [];
 
@@ -117,8 +118,8 @@ export const handleScheduleFlow = async ({ date, appointmentInfo, setAppointment
   try {
     // Determinar el endpoint y el método según el estado
     const endpoint = cita.estado === "Reprogramada" 
-      ? "http://localhost:5256/api/MedicalAppointment/UpdateMedicalAppointment" 
-      : "http://localhost:5256/api/MedicalAppointment/AddMedicalAppointment";
+      ? `${API_URL}/api/MedicalAppointment/UpdateMedicalAppointment` 
+      : `${API_URL}/api/MedicalAppointment/AddMedicalAppointment`;
   
     const method = cita.estado === "Reprogramada" ? "PUT" : "POST";
   

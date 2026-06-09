@@ -3,6 +3,7 @@ import "../../styles/notification.css";
 import administrationIcon from "../../assets/images/administracion.png";
 import { useMiSaludStore } from "../../zustand/miSaludStore.js";
 import {modalMessage} from "../../helpers/modal-alert/modalAlert.js";
+import { API_URL } from "../../config";
 
 const CreateNotification = () => {
   const [title, setTitle] = useState("");
@@ -31,7 +32,7 @@ const CreateNotification = () => {
   
     const endpoint = endpointMap[target];
   
-    const url = `http://localhost:5256/api/Notification/${endpoint}?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(description)}`;
+    const url = `${API_URL}/api/Notification/${endpoint}?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(description)}`;
 
   try {
     const response = await fetch(url, {
